@@ -30,11 +30,10 @@ if you want to permanantly run the USBIP daemon on every start up, configure the
 
 ```bash
 sudo nano /etc/systemd/system/usbipd.service
+```
+Add the below text in the file
 
 ```text
-
-Add the below text in the file 
-```
 [Unit]
 Description=USB/IP server
 After=network.target
@@ -45,6 +44,7 @@ ExecStart=/usr/bin/usbipd
 [Install]
 WantedBy=multi-user.target
 ```
+
 Finally run the service by 
 
 ```bash 
